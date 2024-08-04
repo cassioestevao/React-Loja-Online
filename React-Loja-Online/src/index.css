@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Playwrite AU QLD", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
 
 body {
@@ -11,15 +15,32 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+
+}
+main {
+  background-image: url(https://cdn.pixabay.com/photo/2021/09/13/21/06/floral-background-6622475_1280.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: static;  
+}
+main::before {
+  filter: blur(8px); /* Ajuste o valor conforme necessário */
+  z-index: -1;
 }
 
 header {
   background: #333;
   color: #fff;
   padding: 1rem 0;
+  position: fixed;
+  opacity: 80%;
+  width: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2021/09/13/21/06/floral-background-6622475_1280.png);
 }
+
 
 header .logo {
   font-size: 2rem;
@@ -30,15 +51,32 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  transition: 1s ease-in-out;
 }
 
 nav ul li {
   margin: 0 1rem;
 }
+.list-menu li i {
+  font-size: 30px;
+}
 
+.shadow {
+  filter: drop-shadow(2px 2px 10px rgb(0, 0, 0));
+}
+
+.shadow:hover {
+  color: #000000;
+}
+.list-menu li i:hover{
+  transform: scale(1.6);
+  transition: 1.2s ease-in;
+}
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  
+
 }
 
 .hero {
@@ -63,7 +101,7 @@ nav ul li a {
   color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   font-weight: bold;
 }
 
@@ -118,6 +156,7 @@ nav ul li a {
 
 footer {
   background: #333;
+  background-image: url(https://cdn.pixabay.com/photo/2021/09/13/21/06/floral-background-6622475_1280.png);
   color: #fff;
   text-align: center;
   padding: 1rem 0;
@@ -125,3 +164,4 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
